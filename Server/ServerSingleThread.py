@@ -1,8 +1,10 @@
 import socket
-import threading
 
-print("\nSTARTING SERVER\n")
-print("Welcome to John's test server, you are in the server side\n")
+# Single thread server using TCP 
+
+print("\nSTARTING SINGLE THREAD SERVER\n")
+print("Welcome to John's test server, you are in the server side")
+print("\n-------------------------\n")
 
 # Setting the socket's address
 HOST_AND_PORT = ('localhost', 20000)
@@ -18,19 +20,9 @@ conn, addr = serverSocket.accept() # Store the connection and the address of the
 print("[*] Connected to: ", addr)
 
 while True:
-    data = conn.recv(1024) # Stabilishes the limit size of the data received from client
-    if not data:
+    dataReceived = conn.recv(1024) # Stabilishes the limit size of the data received from client
+    if not dataReceived:
         print("Closing the connection")
         conn.close() # Close the connection
         break
-    conn.sendall(data.upper()) # Send all the data received from client back to it
-# handle_client(clientSocket)
-# client = serverSocket.accept()
-
-# def handle_client(clientSocket):
-#     request = clientSocket.recv()
-#     print("[*] Received " + request)
-#     print("\n----------------------\n")
-#     clientSocket.send('\nMessage sent to the client: ' + addr[0])
-#     clientSocket.send('\n ACK! \nReceived from the server.\n')
-#     clientSocket.close()
+    conn.sendall(dataReceived.upper()) # Send all the data received from client back to it
