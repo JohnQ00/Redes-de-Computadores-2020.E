@@ -1,17 +1,15 @@
 import socket
 import threading
+from Server import ServerTextProvider
 
 # Multi thread server using TCP 
 
-print("\nSTARTING MULTITHREAD SERVER\n")
-print("Welcome to John and Hiago's test server, you are in the server side")
-print("\n-------------------------\n")
-
+ServerTextProvider.server_introduction("SERVER")
 #Creating the command's array and command's content
 commands = ['DISCONNECT', 'UPPER']
 
 # Setting the socket's address
-HOST_AND_PORT = ("localhost", 22000)
+HOST_AND_PORT = ("localhost", 15000)
 
 # Creating the socket for the server
 serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -24,10 +22,13 @@ print("\n-------------------------\n")
 
 def clientHandler(clientSocket):
     while True:
-        dataReceived = clientSocket.recv(2048) # Estabilishes the limit size of the data received from client
+        dataReceived = clientSocket.recv(2048) # Estabilishes the limit size of the data received from client7
+
+        if dataReceived == ' ':
+            break
+        
         print("[*] Receiving: ", dataReceived.decode())
         print("\n-------------------------\n")
-        # a(dataReceived, clientSocket)
 
         if dataReceived.decode() == commands[0]:
             clientSocket.send(str.encode("100 # SHUTTING DOWN THE CONNECTION"))
