@@ -1,14 +1,15 @@
 import socket
-from Client import ClientTextProvider
+import ApplicationCommands
 
 # Multi thread client using TCP 
- 
-ClientTextProvider.client_introduction("CLIENT")
+
+print("\nSTARTING MULTITHREAD CLIENT\n")
+print("Welcome to John and Hiago's client, you are in the client side")
+print("\n-------------------------\n")
 
 class WrongCommand(Exception):
     pass
 
-commandsDictionary = ["100 # SHUTTING DOWN THE CONNECTION"]
 # Setting the address that the client will connect
 HOST_AND_PORT = ("localhost", 15000)
 
@@ -18,14 +19,16 @@ clientSocket.connect(HOST_AND_PORT) # Connecting to the tuple with the server's 
 
 def serverResponses(serverResponse):
     print("\n-------------------------\n")
-    print("Server returned as response:", serverResponse.decode() + '\n')
+    print("Server returned as response:", serverResponse.decode())
+    print("\n-------------------------\n")
     return
 
 def commandInput():
     while True:
         try:
             textToSend = input("Type the command: ")
-            if textToSend != "UPPER" and textToSend != "DISCONNECT":
+            ApplicationCommands.CommandContentHelper(textToSend)
+            if bool(not ApplicationCommands.checkCommand(textToSend)):
                 raise WrongCommand
             break
         except WrongCommand:
@@ -33,19 +36,18 @@ def commandInput():
     return textToSend
             
 while True:
-    textToSend = commandInput()
-    
+    textToSend = commandInput() 
+        
     clientSocket.sendall(str.encode(textToSend))
     serverResponse = clientSocket.recv(4096)
-    serverResponses(serverResponse)
-
-    if serverResponse.decode() == commandsDictionary[0]: # make an array of possible commands just to simplify
-        print("-------------------------\n")
+    
+    if serverResponse.decode() == ApplicationCommands.commandsCodes[0]:
+        serverResponses(serverResponse)
         break
 
-    contentToSend = input("Type the text you want to send: ")
-    clientSocket.sendall(str.encode(contentToSend))
-    serverResponse = clientSocket.recv(4096)
-    serverResponses(serverResponse)
-
-    
+    else:
+        serverResponse = serverResponse.decode('utf-8')
+        # a = eval(a) TA DANDO ERRO DE EOF
+        print("\n-------------------------\n")
+        print("Server returned as response:", serverResponse)
+        print("\n-------------------------\n")
