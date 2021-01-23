@@ -191,6 +191,7 @@ DISCONNECT
 ### 5. Descrição dos retornos
 
 - #100 - A conexão entre cliente e servidor foi desfeita
+- #125 - O comando foi escrito errado
 - #150 - Registro foi concluído
 - #155 - Leitura concluída
 - #165 - Distância calculada e entregue em km
