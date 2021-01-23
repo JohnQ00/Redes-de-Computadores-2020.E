@@ -1,5 +1,5 @@
 <h2 align = center> Redes de Computadores </h2>
-<h3 align = center> Protocolo cliente-servidor para distância e localização </h3>
+<h3 align = center> Protocolo de aplicação cliente-servidor para distância e localização </h3>
 <p align = center> Repositório destinado ao projeto de criação de socket e protocolo de aplicação para a disciplina de Redes de Computadores. </p>
 <hr>
 <p align = center>
