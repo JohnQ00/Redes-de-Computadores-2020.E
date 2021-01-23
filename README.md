@@ -171,8 +171,9 @@ Server returned as response: #<numero_do_retorno> <Lista de pontos>
 Exemplo:
 
 ```
-Server returned as response: #155 [['Username', 'User location', "Marker's 
-name", 'Marker location'], ['Fulano', "['1.00', '2.00']", 'Casa', "['3.00', '4.00']"]
+Server returned as response: #155
+'Username', 'User location', 'Point name', 'Point location'
+ 'Fulano', '1.00', '2.00', 'Casa', '3.00', '4.00'
 ```
 
 ### 4.4 - DISCONNECT
