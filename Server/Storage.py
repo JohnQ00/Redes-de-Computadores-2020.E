@@ -1,7 +1,7 @@
 import csv
 import os
 
-storageColumns = ['Username', 'User location', "Marker's name", 'Marker location']
+storageColumns = ['Username', 'User location', 'Point name', 'Point location']
 archiveName = 'Storage.csv'
         
 def generateStorage():
@@ -31,8 +31,11 @@ def searchFile(archiveName):
 
 def readStorage():
     markersList = []
-    with open(archiveName, 'r', newline='') as csvfile:
-        reader = csv.reader(csvfile, delimiter=';', quotechar='"')
-        for row in reader:
-            markersList.append(row)
+    try:
+        with open(archiveName, 'r', newline='') as csvfile:
+            reader = csv.reader(csvfile, delimiter=';', quotechar='"')
+            for row in reader:
+                markersList.append(row)
+    except PermissionError:
+        return '#300'
     return markersList

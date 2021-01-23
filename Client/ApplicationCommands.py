@@ -1,7 +1,6 @@
 import re
 commandsDictionary = ['DISCONNECT', 'REGISTER', 'READ', 'DISTANCE']
 commandsCodes = ['#100', '#150', '#300', '#155', '#310', '#165', '#170', '#320']
-# disconnect, register successful, read successful and distance successful
 commandFromClient = []
 
 def checkCommand(inputFromClient):
@@ -61,21 +60,3 @@ def regexChecker(temporaryList):
         return True
     elif re.search("[0-9]", temporaryList[1]) != None and re.search("[0-9]", temporaryList[3]) != None:
         return False
-
-
-
-# elif commandFromClient[0].strip() != command:
-#     return False
-
-
-
-# if inputFromClient.find('#') != -1:
-#                 print("aiaiaa")
-#                 if commandFromClient.__len__() != 1:
-#                     print("pinto")
-#                     return False
-#                 elif commandFromClient.__len__() == 1:
-#                     print("prexeca")
-#                     return False
-#             else:
-#                 return False

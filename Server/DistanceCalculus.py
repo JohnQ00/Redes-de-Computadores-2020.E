@@ -26,16 +26,18 @@ def computeDistanceBtwTwoPoints(commandContentFromClient):
 
     outputToClient = []
 
-    if distance_untreated > 1000.0:
+    if distance_untreated >= 1000.0:
         final_distance = distance_untreated / 1000
         final_distance = final_distance.__round__(2)
         outputToClient.append('#165')
         outputToClient.append('The distance between the two points is ' + str(final_distance) + ' km in a straight line')
-    else:
+    elif distance_untreated < 1000.0:
         final_distance = final_distance.__round__(0)
         outputToClient.append('#170')
         outputToClient.append('The distance between the two points is ' + str(final_distance) + ' m in a straight line')
-
+    elif distance_untreated <= 0:
+        outputToClient.append('#320')
+        outputToClient.append(' ')
     return outputToClient
 
 
@@ -51,6 +53,3 @@ def deattachCoordinatesFromCommand(commandContentFromClient):
 
     pointLocation.append(temporaryList[3][0].strip())
     pointLocation.append(temporaryList[3][1].strip())
-
-# print(computeDistanceBtwTwoPoints('a|(-23.533333,-46.616667)|k|(-15.783333,-47.916667)'))
-# print(computeDistanceBtwTwoPoints('(-23.533333,-46.616667)|(-15.783333,-47.916667)'))

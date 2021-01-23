@@ -4,7 +4,8 @@ import ApplicationCommands
 # Multi thread client using TCP 
 
 print("\nSTARTING MULTITHREAD CLIENT\n")
-print("Welcome to John and Hiago's client, you are in the client side")
+print("Welcome to localization and distance protocol, you are in the client side")
+print("Made by Hiago Lopes and John Dutra")
 print("\n-------------------------\n")
 
 class WrongCommand(Exception):
@@ -47,7 +48,6 @@ while True:
 
     else:
         serverResponse = serverResponse.decode('utf-8')
-        # a = eval(a) TA DANDO ERRO DE EOF
         print("\n-------------------------\n")
         print("Server returned as response:", serverResponse)
-        print("\n-------------------------\n")
+        print("-------------------------\n")

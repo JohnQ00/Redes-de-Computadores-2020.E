@@ -32,5 +32,3 @@ def commandSplitFromInput(inputFromClient):
         commandFromClient.append(temporaryCommandSplit[0].strip())
     return commandFromClient
 
-# print(commandContentCheck('John|Ponto|(1.5555, 1.6665)|(1.552255, 1.6688865)'))
-# print(commandSplitFromInput('REGISTER # John|Ponto|(1.5555, 1.6665)|(1.552255, 1.6688865)'))

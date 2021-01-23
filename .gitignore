@@ -1,5 +1,7 @@
 # Entire files
 c.py
+ClientSingleThread.py
+ServerSingleThread.py
 
 # Extensions
 *.pyc
