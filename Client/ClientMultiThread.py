@@ -33,7 +33,7 @@ def commandInput():
                 raise WrongCommand
             break
         except WrongCommand:
-            print("\nYou mistyped the command. Please, try again\n")
+            print("\n#125 You mistyped the command. Please, try again\n")
     return textToSend
             
 while True:

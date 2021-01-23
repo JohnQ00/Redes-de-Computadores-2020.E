@@ -1,5 +1,5 @@
 commands = ['DISCONNECT', 'REGISTER', 'READ', 'DISTANCE']
-commandsCodes = ['#100', '#150', '#300', '#155', '#310', '#165', '#170', '#320']
+commandsCodes = ['#100', '#150', '#300', '#155', '#310', '#165', '#170', '#320', '#125']
 temporaryCommandSplit = []
 
 def commandContentCheck(commandContentFromClient):

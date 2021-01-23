@@ -1,6 +1,6 @@
 import re
 commandsDictionary = ['DISCONNECT', 'REGISTER', 'READ', 'DISTANCE']
-commandsCodes = ['#100', '#150', '#300', '#155', '#310', '#165', '#170', '#320']
+commandsCodes = ['#100', '#150', '#300', '#155', '#310', '#165', '#170', '#320', '#125']
 commandFromClient = []
 
 def checkCommand(inputFromClient):
