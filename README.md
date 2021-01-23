@@ -1,11 +1,15 @@
-<h2 align = center> Redes de Computadores - Protocolo cliente-servidor para distância e localização </h2>
+<h2 align = center> Redes de Computadores </h2>
+<h3 align = center> Protocolo cliente-servidor para distância e localização </h3>
 <p align = center> Repositório destinado ao projeto de criação de socket e protocolo de aplicação para a disciplina de Redes de Computadores. </p>
 <hr>
 <p align = center>
   <a href = 'https://ufal.br/' target = "_blank">
-    <img src = '/img/ufal.png' width = '400'>
+    <img src = '/img/ufal.png' width = '300'>
   </a>
 </p>
+
+Professor: Leandro Melo de Sales
+
 Alunos:
 
 - Hiago Lopes Cavalcante
