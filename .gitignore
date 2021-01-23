@@ -1,7 +1,7 @@
 # Entire files
 c.py
-ClientSingleThread.py
-ServerSingleThread.py
+/Client/ClientSingleThread.py
+/Server/ServerSingleThread.py
 
 # Extensions
 *.pyc
