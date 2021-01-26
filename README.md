@@ -15,6 +15,10 @@ Alunos:
 - Hiago Lopes Cavalcante
 - John Davi Dutra Canuto Pires
 
+Requisitos:
+
+- Python: 3.9.0
+
 ### 1. Execução
 
 Para executar o servidor basta rodar o comando:
