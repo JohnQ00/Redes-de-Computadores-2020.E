@@ -12,8 +12,8 @@ Professor: Leandro Melo de Sales
 
 Alunos:
 
-- Hiago Lopes Cavalcante
-- John Davi Dutra Canuto Pires
+- <a href="https://github.com/hglps">Hiago Lopes Cavalcante</a>
+- <a href="https://github.com/JohnQ00">John Davi Dutra Canuto Pires</a>
 
 Requisitos:
 
